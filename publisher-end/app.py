@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 CORS(app)
 
-MQTT_BROKER = '118.89.72.217'
+MQTT_BROKER = '139.224.192.45'
 MQTT_PORT = 8083
 MQTT_KEEP_ALIVE = 60
 MQTT_USERNAME = 'mqtt_server'
