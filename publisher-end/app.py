@@ -10,6 +10,9 @@ import io
 import base64
 import os
 
+# 获取脚本所在目录的绝对路径
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 app = Flask(__name__)
 
 CORS(app)
@@ -30,7 +33,7 @@ publish_threads = {}
 
 def load_data(topic):
     global data
-    data_file = f'sensor-data/{topic}.json'
+    data_file = os.path.join(BASE_DIR, 'sensor-data', f'{topic}.json')
     with open(data_file, 'r') as f:
         data[topic] = json.load(f)
 
@@ -46,7 +49,7 @@ def format_data(raw_data, topic):
         detail.append({'time': time_str, 'value': value_str})
     detail_sorted = sorted(detail, key=lambda x: datetime.strptime(x['time'], '%H:%M'))
     graph = generate_graph(detail_sorted)
-    prediction_image_path = f'plots/{topic}_plots/{topic}_plot_{current_index.get(topic, 0) + 1}.png'
+    prediction_image_path = os.path.join(BASE_DIR, 'plots', f'{topic}_plots', f'{topic}_plot_{current_index.get(topic, 0) + 1}.png')
     if os.path.exists(prediction_image_path):
         with open(prediction_image_path, 'rb') as img_file:
             prediction_base64 = base64.b64encode(img_file.read()).decode('utf-8')
