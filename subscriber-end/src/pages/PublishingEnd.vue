@@ -12,12 +12,13 @@
 import {ref} from 'vue'
 import {useRouter} from 'vue-router'
 import axios from 'axios'
+import {API_BASE_URL} from '../config'
 
 const router = useRouter()
 const responseData = ref()
 
 function fetchDataByTopic(topic: string) {
-  axios.get(`http://122.152.212.194:3000/pub/${topic}`).then((response) => {
+  axios.get(`${API_BASE_URL}/pub/${topic}`).then((response) => {
     responseData.value = response.data
   }).catch(() => {
     responseData.value = null

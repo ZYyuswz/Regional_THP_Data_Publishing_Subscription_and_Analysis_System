@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 CORS(app)
 
-MQTT_BROKER = '139.224.192.45'
+MQTT_BROKER = '172.24.18.241'  # 使用内网 IP，因为 app.py 和 MQTT 在同一台服务器
 MQTT_PORT = 8083
 MQTT_KEEP_ALIVE = 60
 MQTT_USERNAME = 'mqtt_server'

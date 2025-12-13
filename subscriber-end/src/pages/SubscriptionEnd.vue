@@ -65,6 +65,7 @@ import mqtt from 'mqtt'
 import {ref, onMounted, onBeforeUnmount} from 'vue'
 import {useRouter} from 'vue-router'
 import {ElMessage} from 'element-plus'
+import {MQTT_WS_URL, MQTT_USERNAME, MQTT_PASSWORD} from '../config'
 
 const router = useRouter()
 const client = ref<mqtt.MqttClient | null>(null)
@@ -82,9 +83,9 @@ const humidityImageSrc = ref('')
 const pressureImageSrc = ref('')
 
 const connectToMQTT = () => {
-  client.value = mqtt.connect('ws://118.89.72.217:8083', {
-    username: 'mqtt_server',
-    password: 'mqtt_password',
+  client.value = mqtt.connect(MQTT_WS_URL, {
+    username: MQTT_USERNAME,
+    password: MQTT_PASSWORD,
     clientId: crypto.randomUUID(),
     clean: true
   })
