@@ -21,7 +21,7 @@ MQTT_BROKER = '172.24.18.241'  # 使用内网 IP，因为 app.py 和 MQTT 在同
 MQTT_PORT = 8083
 MQTT_KEEP_ALIVE = 60
 MQTT_USERNAME = 'mqtt_server'
-MQTT_PASSWORD = 'mqtt_password'
+MQTT_PASSWORD = 'tongji'  # 与 /etc/mosquitto/passwd 中的密码一致
 
 mqtt_client = mqtt.Client(transport='websockets')
 mqtt_client.username_pw_set(MQTT_USERNAME, MQTT_PASSWORD)

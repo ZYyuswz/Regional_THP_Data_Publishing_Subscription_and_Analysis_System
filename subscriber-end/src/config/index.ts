@@ -8,9 +8,10 @@ export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://139.224
 
 // MQTT WebSocket 地址
 // 注意：前端在本地运行时，需要使用服务器的公网 IP 才能访问
+// 如果连接失败，可以尝试添加路径，如: 'ws://139.224.192.45:8083/mqtt'
 export const MQTT_WS_URL = import.meta.env.VITE_MQTT_WS_URL || 'ws://139.224.192.45:8083'
 
 // MQTT 认证信息
 export const MQTT_USERNAME = import.meta.env.VITE_MQTT_USERNAME || 'mqtt_server'
-export const MQTT_PASSWORD = import.meta.env.VITE_MQTT_PASSWORD || 'mqtt_password'
+export const MQTT_PASSWORD = import.meta.env.VITE_MQTT_PASSWORD || 'tongji'  // 与 /etc/mosquitto/passwd 中的密码一致
 
