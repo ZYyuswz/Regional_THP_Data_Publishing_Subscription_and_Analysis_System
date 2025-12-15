@@ -1,6 +1,0 @@
-{
-  // Markdown PDF 插件样式配置（路径相对当前 Markdown 文件）
-  "markdown-pdf.styles": ["./markdown-pdf.css"],
-  "markdown-pdf.stylesRelativePathFile": true
-}
-

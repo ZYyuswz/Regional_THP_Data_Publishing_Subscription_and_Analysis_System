@@ -1,1 +1,17 @@
-"publisher-end/plots/" 
+# Node modules
+subscriber-end/node_modules/
+
+# 生成的图片
+publisher-end/plots/
+
+# VSCode 设置
+.vscode/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 其他临时文件
+*.log
+.DS_Store
