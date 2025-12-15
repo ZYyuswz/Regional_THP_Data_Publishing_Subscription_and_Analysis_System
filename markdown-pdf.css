@@ -1,0 +1,84 @@
+/* Markdown PDF 样式配置 */
+
+/* 设置整体字体 */
+body {
+  font-family: "Microsoft YaHei", "SimSun", "宋体", Arial, sans-serif !important;
+  font-size: 11pt !important;
+  line-height: 1.5 !important;
+  color: #000000 !important;
+  margin: 0 auto !important;
+  max-width: 900px !important; /* 控制版心，避免过宽 */
+  padding: 0 12px !important;
+}
+
+/* 标题字体统一 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Microsoft YaHei", "SimSun", "宋体", Arial, sans-serif !important;
+  font-weight: bold !important;
+  border-bottom: none !important;
+  border: none !important;
+  text-decoration: none !important;
+  border-bottom-width: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0.5em !important;
+}
+
+h1 {
+  font-size: 16pt !important;
+}
+
+h2 {
+  font-size: 14pt !important;
+}
+
+h3 {
+  font-size: 12.5pt !important;
+}
+
+/* 代码块字体 */
+code {
+  font-family: "Consolas", "Courier New", monospace !important;
+  font-size: 10pt !important;
+}
+
+pre {
+  font-family: "Consolas", "Courier New", monospace !important;
+  font-size: 10pt !important;
+}
+
+pre code {
+  font-family: "Consolas", "Courier New", monospace !important;
+  font-size: 10pt !important;
+}
+
+/* 段落字体 */
+p {
+  font-family: "Microsoft YaHei", "SimSun", "宋体", Arial, sans-serif !important;
+  font-size: 11pt !important;
+  margin: 0 0 0.65em 0 !important;
+}
+
+/* 列表字体 */
+li {
+  font-family: "Microsoft YaHei", "SimSun", "宋体", Arial, sans-serif !important;
+  font-size: 11pt !important;
+  margin: 0.25em 0 !important;
+}
+
+/* 表格字体 */
+table {
+  font-family: "Microsoft YaHei", "SimSun", "宋体", Arial, sans-serif !important;
+  font-size: 11pt !important;
+  border-collapse: collapse !important;
+}
+
+table th,
+table td {
+  padding: 6px 8px !important;
+  border: 1px solid #ccc !important;
+}
